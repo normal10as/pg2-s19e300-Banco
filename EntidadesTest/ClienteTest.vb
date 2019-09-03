@@ -1,7 +1,7 @@
 Imports System
 Imports Entidades
 Module Program
-    Sub Main(args As String())
+    Sub ClienteTest()
         ' instanciación
         Dim cliente1 As Cliente
         'inicializacion
