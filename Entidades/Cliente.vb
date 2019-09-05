@@ -1,10 +1,33 @@
 Public Class Cliente
+    Private Cuentas As List(Of Cuenta)
     Public Sub New()
-        Nombre = ""
-        Documento = 0
-        FechaNacimiento = Date.Now()
+        Me.New("", 0, Date.MinValue)
     End Sub
-    Private _nombre As String
+    Public Sub New(Nombre As String, Documento As Integer)
+        Me.New(Nombre, Documento, Date.MinValue)
+    End Sub
+    Public Sub New(Nombre As String, Documento As Integer, FechaNacimiento As Date)
+        Me.Nombre = Nombre
+        Me.Documento = Documento
+        Me.FechaNacimiento = FechaNacimiento
+        Cuentas = New List(Of Cuenta)
+    End Sub
+    'Private _nombre As String
+    'Public Sub New()
+    '    Nombre = ""
+    '    Documento = 0
+    '    FechaNacimiento = Date.MinValue
+    '    Cuentas = New List(Of Cuenta)
+    'End Sub
+    'Public Sub New(Nombre As String, Documento As Integer)
+    '    Me.New()
+    '    Me.Nombre = Nombre
+    '    Me.Documento = Documento
+    'End Sub
+    'Public Sub New(Nombre As String, Documento As Integer, FechaNacimiento As Date)
+    '    Me.New(Nombre, Documento)
+    '    Me.FechaNacimiento = FechaNacimiento
+    'End Sub
     Public Property Nombre As String
         Get
             Return _nombre

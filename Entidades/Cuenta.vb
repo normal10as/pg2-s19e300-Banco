@@ -1,4 +1,7 @@
 ﻿Public Class Cuenta
+    Sub New(Numero As Integer)
+        Me.Numero = Numero
+    End Sub
     Public Property Numero As Integer
     Private _saldo As Decimal
     Public ReadOnly Property Saldo As Decimal
