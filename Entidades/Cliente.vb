@@ -28,6 +28,7 @@ Public Class Cliente
     '    Me.New(Nombre, Documento)
     '    Me.FechaNacimiento = FechaNacimiento
     'End Sub
+    Private _nombre As String
     Public Property Nombre As String
         Get
             Return _nombre
