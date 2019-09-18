@@ -55,4 +55,7 @@ Public Class Cliente
             _fechaNacimiento = value
         End Set
     End Property
+    Public Overrides Function ToString() As String
+        Return Nombre & " " & Documento
+    End Function
 End Class
