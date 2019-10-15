@@ -1,4 +1,4 @@
-﻿Public Class Cuenta
+﻿Public MustInherit Class Cuenta
     Sub New(Numero As Integer)
         Me.Numero = Numero
     End Sub
