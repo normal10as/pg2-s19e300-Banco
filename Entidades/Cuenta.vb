@@ -13,12 +13,16 @@
     Public Sub Depositar(value As Decimal)
         _saldo += value
     End Sub
-    Public Function Extraer(value As Decimal) As Boolean
+    Public Overridable Function Extraer(value As Decimal) As Boolean
         If value <= _saldo Then
-            _saldo -= value
+            DescontarSaldo(value)
             Return True
         Else
             Return False
         End If
     End Function
+
+    Protected Sub DescontarSaldo(value As Decimal)
+        _saldo -= value
+    End Sub
 End Class

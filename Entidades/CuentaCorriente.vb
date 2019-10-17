@@ -8,4 +8,14 @@
     End Sub
 
     Public Property MontoSobregiro As Decimal
+
+    Public Overrides Function Extraer(value As Decimal) As Boolean
+        If value <= Saldo + MontoSobregiro Then
+            DescontarSaldo(value)
+            Return True
+        Else
+            Return False
+        End If
+        '        Return MyBase.Extraer(value)
+    End Function
 End Class

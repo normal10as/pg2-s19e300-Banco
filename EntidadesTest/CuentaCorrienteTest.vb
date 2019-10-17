@@ -13,7 +13,9 @@ Module CuentaCorrienteTest
         Console.WriteLine("Saldo: " & cuenta1.Saldo)
         cuenta1.Extraer(5000)
         Console.WriteLine("Saldo: " & cuenta1.Saldo)
-        cuenta1.Extraer(5000)
+        cuenta1.Extraer(1500)
+        Console.WriteLine("Saldo: " & cuenta1.Saldo)
+        cuenta1.Extraer(1500)
         Console.WriteLine("Saldo: " & cuenta1.Saldo)
     End Sub
 End Module
