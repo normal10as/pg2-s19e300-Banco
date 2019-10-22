@@ -25,4 +25,20 @@
     Protected Sub DescontarSaldo(value As Decimal)
         _saldo -= value
     End Sub
+
+    Public Overrides Function ToString() As String
+        Return Numero
+    End Function
+
+    Public MustOverride Function UltimosMovimientos() As String
+    Private _cliente As Cliente
+    Public Property Cliente As Cliente
+        Set(value As Cliente)
+            _cliente = value
+        End Set
+        Get
+            Return _cliente
+        End Get
+    End Property
+
 End Class

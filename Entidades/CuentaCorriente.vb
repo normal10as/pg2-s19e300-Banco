@@ -18,4 +18,12 @@
         End If
         '        Return MyBase.Extraer(value)
     End Function
+
+    Public Overrides Function ToString() As String
+        Return "C.C. Nª " & MyBase.ToString()
+    End Function
+
+    Public Overrides Function UltimosMovimientos() As String
+        Throw New NotImplementedException()
+    End Function
 End Class
