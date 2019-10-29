@@ -2,7 +2,7 @@
     Sub main()
         'ClienteTest()
         'CuentaTest.Hacer()
-        'CuentaCorrienteTest.Hacer()
-        BancoTest.hacer()
+        CuentaCorrienteTest.Hacer()
+        'BancoTest.hacer()
     End Sub
 End Module

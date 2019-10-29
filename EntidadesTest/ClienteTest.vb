@@ -19,6 +19,17 @@ Module Program
         Console.WriteLine(cliente1.Documento)
         Console.WriteLine(cliente1.FechaNacimiento)
         Console.WriteLine(cliente1.ToString)
+        Dim cuenta1 As New CuentaCorriente(67436732, 0, 1000)
+
+        'cliente1.AddCuenta(cuenta1)
+        Console.WriteLine("Cuenta cliente: " & cuenta1.Cliente.ToString)
+        'cuenta1.Cliente = cliente1
+        'cliente1.AddCuenta(New CuentaCorriente(465465, 1000, 3000))
+        'cliente1.AddCuenta(New CuentaCorriente(666, 1000, 3000))
+
+        For Each cuenta In cliente1.GetAllCuentas
+            Console.WriteLine(cuenta)
+        Next
 
         Dim cliente2 As New Cliente("Rafa Nadal", 54857485)
         Console.WriteLine(cliente2.Nombre)
