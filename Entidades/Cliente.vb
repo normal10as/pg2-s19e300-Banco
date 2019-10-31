@@ -1,4 +1,7 @@
+Imports Entidades
+
 Public Class Cliente
+    Implements IOperable
     Public Sub New()
         Me.New("", 0, Date.MinValue)
     End Sub
@@ -54,6 +57,17 @@ Public Class Cliente
             _fechaNacimiento = value
         End Set
     End Property
+
+    Public ReadOnly Property Saldo As Decimal Implements IOperable.Saldo
+        Get
+            Dim total As Decimal
+            For Each cuenta In _cuentas
+                total += cuenta.Saldo
+            Next
+            Return total
+        End Get
+    End Property
+
     Public Overrides Function ToString() As String
         Return Nombre & " " & Documento
     End Function

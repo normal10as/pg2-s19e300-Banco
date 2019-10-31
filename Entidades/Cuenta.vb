@@ -1,14 +1,18 @@
-﻿Public MustInherit Class Cuenta
+﻿Imports Entidades
+
+Public MustInherit Class Cuenta
+    Implements IOperable
     Sub New(Numero As Integer)
         Me.Numero = Numero
     End Sub
-    Sub New(Numero As Integer, cliente As Cliente)
+    Sub New(Numero As Integer, cliente As Cliente, saldo As Decimal)
         Me.Numero = Numero
         Me.Cliente = cliente
+        _saldo = saldo ' ojojoooooooo
     End Sub
     Public Property Numero As Integer
     Private _saldo As Decimal
-    Public ReadOnly Property Saldo As Decimal
+    Public ReadOnly Property Saldo As Decimal Implements IOperable.Saldo
         Get
             Return _saldo
         End Get

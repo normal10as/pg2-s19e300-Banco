@@ -19,8 +19,16 @@ Module Program
         Console.WriteLine(cliente1.Documento)
         Console.WriteLine(cliente1.FechaNacimiento)
         Console.WriteLine(cliente1.ToString)
-        Dim cuenta1 As New CuentaCorriente(67436732, 0, 1000)
-
+        Console.WriteLine("SAldo cliente" & cliente1.Saldo)
+        Dim cuenta1 As New CuentaCorriente(67436732, 5000, 1000, cliente1)
+        Console.WriteLine("SAldo cuenta1: " & cuenta1.Saldo)
+        Console.WriteLine("SAldo cliente: " & cliente1.Saldo)
+        Dim cuenta2 As New CuentaCorriente(465465, 8000, 3000, cliente1)
+        Console.WriteLine("SAldo cuenta2: " & cuenta2.Saldo)
+        Console.WriteLine("SAldo cliente: " & cliente1.Saldo)
+        cuenta1.Extraer(2000)
+        Console.WriteLine("SAldo cuenta1: " & cuenta1.Saldo)
+        Console.WriteLine("SAldo cliente: " & cliente1.Saldo)
         'cliente1.AddCuenta(cuenta1)
         Console.WriteLine("Cuenta cliente: " & cuenta1.Cliente.ToString)
         'cuenta1.Cliente = cliente1

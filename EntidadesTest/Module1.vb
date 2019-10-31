@@ -1,8 +1,8 @@
 ﻿Module Module1
     Sub main()
-        'ClienteTest()
+        ClienteTest()
         'CuentaTest.Hacer()
-        CuentaCorrienteTest.Hacer()
+        'CuentaCorrienteTest.Hacer()
         'BancoTest.hacer()
     End Sub
 End Module

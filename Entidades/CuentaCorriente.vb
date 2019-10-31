@@ -8,7 +8,7 @@
     End Sub
     Sub New(Numero As Integer, saldo As Decimal, MontoSobregiro As Decimal, cliente As Cliente)
         ' invocaciòn a otro constructor tiene que ser la primer linea
-        MyBase.New(Numero, cliente)
+        MyBase.New(Numero, cliente, saldo)
         Me.MontoSobregiro = MontoSobregiro
     End Sub
     Public Property MontoSobregiro As Decimal
