@@ -19,12 +19,15 @@ Module Program
         Console.WriteLine(cliente1.Documento)
         Console.WriteLine(cliente1.FechaNacimiento)
         Console.WriteLine(cliente1.ToString)
-        Console.WriteLine("SAldo cliente" & cliente1.Saldo)
+        Console.WriteLine("SAldo cliente ")
+        MostrarSaldo(cliente1)
         Dim cuenta1 As New CuentaCorriente(67436732, 5000, 1000, cliente1)
-        Console.WriteLine("SAldo cuenta1: " & cuenta1.Saldo)
+        Console.WriteLine("SAldo cuenta1: ")
+        MostrarSaldo(cuenta1)
         Console.WriteLine("SAldo cliente: " & cliente1.Saldo)
         Dim cuenta2 As New CuentaCorriente(465465, 8000, 3000, cliente1)
-        Console.WriteLine("SAldo cuenta2: " & cuenta2.Saldo)
+        Console.WriteLine("SAldo cuenta2: ")
+        MostrarSaldo(cuenta2)
         Console.WriteLine("SAldo cliente: " & cliente1.Saldo)
         cuenta1.Extraer(2000)
         Console.WriteLine("SAldo cuenta1: " & cuenta1.Saldo)
@@ -48,5 +51,9 @@ Module Program
         Console.WriteLine(cliente3.Nombre)
         Console.WriteLine(cliente3.Documento)
         Console.WriteLine(cliente3.FechaNacimiento)
+    End Sub
+
+    Sub MostrarSaldo(oOperable As IOperable)
+        Console.WriteLine(oOperable.Saldo)
     End Sub
 End Module
